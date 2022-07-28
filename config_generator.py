@@ -106,6 +106,24 @@ if int(options['inverter']['level']) >= 1:
     sensors.append({'name': "Phase A Voltage", 'sensor_type': "sensor",
     'register': "phase_a_voltage", 'dev_class': "voltage",
     'state_class': "measurement"})
+    
+    #Testing
+    sensors.append({'name': "MPPT 1 Voltage", 'sensor_type': "sensor",
+    'register': "mppt_1_voltage", 'dev_class': "voltage",
+    'state_class': "measurement"})
+    
+    sensors.append({'name': "MPPT 2 Voltage", 'sensor_type': "sensor",
+    'register': "mppt_2_voltage", 'dev_class': "voltage",
+    'state_class': "measurement"})
+    
+    sensors.append({'name': "MPPT 1 Current", 'sensor_type': "sensor",
+    'register': "mppt_1_current", 'dev_class': "current",
+    'state_class': "measurement"})
+    
+    sensors.append({'name': "MPPT 2 Voltage", 'sensor_type': "sensor",
+    'register': "mppt_2_current", 'dev_class': "current",
+    'state_class': "measurement"})
+    #End testing
 
     if options['inverter']['smart_meter'] == True:
         sensors.append({'name': "Meter Power", 'sensor_type': "sensor",
